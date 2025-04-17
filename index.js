@@ -161,24 +161,25 @@ client.on("messageCreate", async (message) => {
     }
 
     // Interruption detection
-    const speaker = message.author.username.toLowerCase();
-    if (speaker.includes("caleb") && Math.random() < 0.3) {
+    const speakerTag = message.author.username.toLowerCase();
+    const messageContent = userMessage.toLowerCase();
+    if (message.author.bot && speakerTag.includes("caleb") && Math.random() < 0.3) {
       const interrupt = interruptResponses.caleb[Math.floor(Math.random() * interruptResponses.caleb.length)];
       return message.channel.send(interrupt);
     }
-    if (speaker.includes("rafayel") && Math.random() < 0.3) {
+    if (message.author.bot && speakerTag.includes("rafayel") && Math.random() < 0.3) {
       const interrupt = interruptResponses.rafayel[Math.floor(Math.random() * interruptResponses.rafayel.length)];
       return message.channel.send(interrupt);
     }
-    if (speaker.includes("solian") && Math.random() < 0.3) {
+    if (message.author.bot && speakerTag.includes("solian") && Math.random() < 0.3) {
       const interrupt = interruptResponses.solian[Math.floor(Math.random() * interruptResponses.solian.length)];
       return message.channel.send(interrupt);
     }
-    if (speaker.includes("sylus") && Math.random() < 0.3) {
+    if (message.author.bot && speakerTag.includes("sylus") && Math.random() < 0.3) {
       const interrupt = interruptResponses.sylus[Math.floor(Math.random() * interruptResponses.sylus.length)];
       return message.channel.send(interrupt);
     }
-    if (speaker.includes("zayne") && Math.random() < 0.3) {
+    if (message.author.bot && speakerTag.includes("zayne") && Math.random() < 0.3) {
       const interrupt = interruptResponses.zayne[Math.floor(Math.random() * interruptResponses.zayne.length)];
       return message.channel.send(interrupt);
     }
